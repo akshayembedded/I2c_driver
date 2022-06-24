@@ -1,6 +1,7 @@
 #include<pic18.h>
 void i2c_init()
 {
+TRISC4=TRISC3=1;
 SSPSTAT=0x00;//1000
 SSPCON1=0x28;//
 SSPCON2=0x00;
@@ -9,7 +10,7 @@ SSPADD=49;
 void i2c_start()
 {
 SEN=1;
-while(SEN==1);//
+while(SEN==1);//sen
 }
 void i2c_stop()
 {
@@ -34,8 +35,6 @@ return SSPBUF;
 void main()
 {
 	int i;
-	TRISB=TRISD=0x00;
-TRISC=0x18;
 for(i=0;i<=10000;i++);
 i2c_init();
 i2c_start();//start slavead+R/w  
