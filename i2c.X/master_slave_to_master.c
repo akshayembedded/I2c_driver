@@ -1,7 +1,7 @@
 #include<pic18.h>
 void i2c_init()
 {
-SSPSTAT=0x00;//1000
+SSPSTAT=0x80;//1000
 SSPCON1=0x28;//
 SSPCON2=0x00;
 SSPADD=49;
