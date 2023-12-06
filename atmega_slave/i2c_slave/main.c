@@ -17,8 +17,8 @@ int main(void)
 	DDRD=0xff;
 
 	i2c_init();
-	i2c_statusr(PINA);
-	i2c_statusr(PIND);
+	i2c_statusr('a');
+	i2c_statusr('g');
 	while(1)
 	{
 
